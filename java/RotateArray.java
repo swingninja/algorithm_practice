@@ -2,11 +2,19 @@ public class RotateArray {
 	public static void main (String[] args) {
 		System.out.println("Rotate Array.");
 		
-		int[] x = new int[]{1,2,3};
+		int[] x = {1,2,3};
+
 		rotate (x, 1);
 	}
 	
-	public static void rotate(int[] nums, int k){
+	private static void rotate(int[] nums, int k){
+		for (int a = 0; a < nums.length; a++) {
+			System.out.print(nums[a]);
+			System.out.print(", ");
+		}
+			
+		System.out.println();
+		
 		if (k > nums.length)
 			k=k%nums.length;
 		
@@ -24,7 +32,12 @@ public class RotateArray {
 		
 		System.arraycopy(result,0, nums, 0, nums.length);
 		
-		System.out.println(nums[0]);
-	}
+		for (int a = 0; a < nums.length; a++) {
+			System.out.print(nums[a]);
+			System.out.print(", ");
+		}
+		System.out.println();
+		
+	}	
 	
 }
